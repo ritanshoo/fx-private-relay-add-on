@@ -123,7 +123,7 @@ async function addRelayIconToInput(emailInput) {
   const emailInputOriginalParentEl = emailInput.parentElement;
 
   // create new wrapping element;
-  const emailInputWrapper = createElementWithClassList("div", "fx-relay-email-input-wrapper");
+  const emailInputWrapper = createElementWithClassList("span", "fx-relay-email-input-wrapper");
   emailInputOriginalParentEl.insertBefore(emailInputWrapper, emailInput);
 
   // add padding to the input so that input text
