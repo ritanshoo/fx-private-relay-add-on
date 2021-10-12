@@ -158,7 +158,12 @@
       }, 1000);
 
     };
-    aliasLabelInput.addEventListener("focusout", saveAliasLabel);
+    aliasLabelInput.addEventListener("focusout", () => {
+      const isValid = aliasLabelForm.reportValidity();
+      if (isValid) {
+        saveAliasLabel();
+      }
+    });
     aliasLabelForm?.addEventListener("submit", (event) => {
       event.preventDefault();
       saveAliasLabel();
